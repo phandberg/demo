@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Grocery Overview</title>
+    <style>
+
+        p.small{
+            line-height: 1.0;
+        }
+
+        #række{
+            display:inline-block;
+        }
+
+        #venstreKolonne{
+            background-color: aqua;
+            float: left;
+        }
+
+        #højreKolonne{
+            background-color: bisque;
+            float: right;
+        }
+
+        .kolonne{
+            width: 400px;
+            height: 400px;
+        }
+
+    </style>
+
+</head>
+<body>
+<h1>hej</h1>
+<div id="række">
+    <!--- Her er vores formular -->
+    <div id="venstreKolonne" class="kolonne">
+        <h1>Indtast vare</h1>
+        <form action="/student/addStudent" method="post"> <!-- dette sker når vi klikker på submit (action)-->
+
+            <label for="id">id</label>
+            <input type="number" name="id" id="id">
+            <br>
+            <label for="firstName">firstName</label>
+            <input type="text" name="firstName" id="firstName">
+            <br>
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName">
+            <br>
+            <label for="enrollmentDate">Enrollment Date:</label>
+            <input type="text" name="enrollmentDate" id="enrollmentDate">
+            <br>
+            <label for="cpr">cpr</label>
+            <input type="text" name="cpr" id="cpr">
+            <input type="submit" name="submit">
+
+        </form>
+    </div>
+    <div id ="højreKolonne" class="kolonne">
+
+        <!---Her viser vi indhold fra fakedatabase -->
+
+
+
+
+            </li>
+
+        </ul>
+
+
+
+    </div>
+</div>
+
+
+
+</body>
+</html>
