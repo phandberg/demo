@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <title>Grocery Overview</title>
-    <style>
+  <!--  <style>
 
         p.small{
             line-height: 1.0;
@@ -29,30 +29,29 @@
             height: 400px;
         }
 
-    </style>
+    </style> -->
 
 </head>
 <body>
-<h1>hej</h1>
+<h1>Create Student</h1>
 <div id="række">
     <!--- Her er vores formular -->
     <div id="venstreKolonne" class="kolonne">
-        <h1>Indtast vare</h1>
-        <form action="/student/addStudent" method="post"> <!-- dette sker når vi klikker på submit (action)-->
+            <form action="/student/addStudent" method="post"> <!-- dette sker når vi klikker på submit (action)-->
 
             <label for="id">id</label>
             <input type="number" name="id" id="id">
             <br>
-            <label for="firstName">firstName</label>
+            <label for="firstName">First name</label><br>
             <input type="text" name="firstName" id="firstName">
             <br>
-            <label for="lastName">Last Name</label>
+            <label for="lastName">Last name</label><br>
             <input type="text" name="lastName" id="lastName">
             <br>
-            <label for="enrollmentDate">Enrollment Date:</label>
+            <label for="enrollmentDate">Enrollment Date:</label><br>
             <input type="text" name="enrollmentDate" id="enrollmentDate">
             <br>
-            <label for="cpr">cpr</label>
+            <label for="cpr">cpr</label><br>
             <input type="text" name="cpr" id="cpr">
             <input type="submit" name="submit">
 

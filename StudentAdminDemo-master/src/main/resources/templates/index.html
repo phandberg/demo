@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Administration</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Students</h1>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Enrollment Date</th>
+            </tr>
+                <tr th:each="student : ${students}">
+                <th th:text="${student.id}"></th>
+                <td th:text="${student.firstName}"></td>
+                <td th:text="${student.lastName}"></td>
+                <td th:text="${student.enrollmentDate}"></td>
+                <th><a th:href="@{/student/detail(id=${student.id})}"> <button class="btn btn-details"> Details</button></a></th>
+                <th><a th:href="@{/student/edit(id=${student.id})}"> <button class="btn btn-ed"> Edit</button></a></th>
+                <th><a th:href="@{/student/delete(id=${student.id})}"> <button class="btn btn-del"> Delete</button></a></th>
+            </tr>
+
+
+        </table>
+    </div>
+</body>
+</html>

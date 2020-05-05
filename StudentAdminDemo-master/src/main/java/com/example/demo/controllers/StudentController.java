@@ -22,7 +22,7 @@ ArrayList<Student> fakeDatabase = new ArrayList<>();
     @GetMapping("/")
     public String index(Model model){
         model.addAttribute("students" , studentRepository.readAll());
-        return "student/index";
+        return "index";
     }
 
     @GetMapping("/student")
