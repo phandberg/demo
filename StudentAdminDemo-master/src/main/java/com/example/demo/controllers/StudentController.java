@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 @Controller
 public class StudentController {
-ArrayList<Student> fakeDatabase = new ArrayList<>();
+    ArrayList<Student> fakeDatabase = new ArrayList<>();
 
     private IStudentRepository studentRepository;
 
@@ -34,14 +34,14 @@ ArrayList<Student> fakeDatabase = new ArrayList<>();
 
     @GetMapping("/createstudent")
     public String createStudent(Model viewModel){
-    //viewModel.addAttribute("students", studentRepository); brug dette til at vise i html
-    return"/student/createStudent";
+        //viewModel.addAttribute("students", studentRepository); brug dette til at vise i html
+        return"/student/createStudent";
     }
 
     @PostMapping("/student/addStudent")
     public String addStudent(@ModelAttribute Student studentFromPost){ //studentfrompost fyldes med data fra vores html form
-    studentRepository.create(studentFromPost); //vores database objekt kører vores create funktion, der fylder en sql query med studentfrompost data
-    return "student/createStudent";
+        studentRepository.create(studentFromPost); //vores database objekt kÃ¸rer vores create funktion, der fylder en sql query med studentfrompost data
+        return "student/createStudent";
     }
 
 
@@ -51,7 +51,7 @@ ArrayList<Student> fakeDatabase = new ArrayList<>();
         Student stu = studentRepository.read(id);
         model.addAttribute("students", studentRepository.readAll());
         studentRepository.delete(id);
-        return "/student/index";
+        return "index";
     }
     //detals. select * where id = ??
 
@@ -64,7 +64,7 @@ ArrayList<Student> fakeDatabase = new ArrayList<>();
     public String updatedStudent(@ModelAttribute Student studentFromPost){
         studentRepository.update(studentFromPost);
         System.out.println(studentFromPost);
-        return "redirect:/student/index";
+        return "redirect:/../templates/studentList";
     }
 
 }

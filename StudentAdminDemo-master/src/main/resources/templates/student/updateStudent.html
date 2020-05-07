@@ -1,42 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 
     <meta charset="UTF-8">
-    <title>Grocery Overview</title>
-    <style>
-
-        p.small{
-            line-height: 1.0;
-        }
-
-        #række{
-            display:inline-block;
-        }
-
-        #venstreKolonne{
-            background-color: aqua;
-            float: left;
-        }
-
-        #højreKolonne{
-            background-color: bisque;
-            float: right;
-        }
-
-        .kolonne{
-            width: 400px;
-            height: 400px;
-        }
-
-    </style>
-
+    <title>Updagte student</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
-<h1>hej</h1>
-<div id="række">
+
+<div id="navbar">
+    <ul class="nav">
+        <li><a href="https://kea.dk/">KEA</a></li>
+        <li><a href="/">Students</a></li>
+        <li><a href="/courseList.html">Courses</a></li>
+    </ul>
+</div>
+<div class="container">
     <!--- Her er vores formular -->
-    <div id="venstreKolonne" class="kolonne">
+
         <h1>Indtast studentens oplysninger</h1>
         <form action="/student/updatedStudent" method="post"> <!-- dette sker når vi klikker på submit (action)-->
 
@@ -54,27 +35,10 @@
             <br>
             <label for="cpr">cpr</label>
             <input type="text" name="cpr" id="cpr">
-            <input type="submit" name="submit">
 
+            <input type="submit" name="submit" button class="btn btn-details">
         </form>
     </div>
-    <div id ="højreKolonne" class="kolonne">
-
-        <!---Her viser vi indhold fra fakedatabase -->
-
-
-
-
-        </li>
-
-        </ul>
-
-
-
-    </div>
-</div>
-
-
 
 </body>
 </html>

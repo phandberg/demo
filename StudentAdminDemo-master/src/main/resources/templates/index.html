@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+
         <h1>Students</h1>
 
         <table>
@@ -23,8 +24,8 @@
                 <td th:text="${student.lastName}"></td>
                 <td th:text="${student.enrollmentDate}"></td>
                 <th><a th:href="@{/student/detail(id=${student.id})}"> <button class="btn btn-details"> Details</button></a></th>
-                <th><a th:href="@{/student/edit(id=${student.id})}"> <button class="btn btn-ed"> Edit</button></a></th>
-                <th><a th:href="@{/student/delete(id=${student.id})}"> <button class="btn btn-del"> Delete</button></a></th>
+                <th><a th:href="@{/student/updateStudent(id=${student.id})}"> <button class="btn btn-ed"> Update</button></a></th>
+                <th><a th:href="@{/student/deleteStudent(id=${student.id})}"> <button class="btn btn-del"> Delete</button></a></th>
             </tr>
 
 

@@ -18,18 +18,16 @@ public class StudentRepositoryImpl implements IStudentRepository {
     public boolean create(Student student) {
         Student studentToCreate = new Student();
         try {
-            PreparedStatement createStudent = conn.prepareStatement("INSERT INTO students(id, firstName, lastName, cpr )" + "VALUES(?,?,?,?)");
-            createStudent.setInt(1, student.getId());
-            createStudent.setString(2, student.getFirstName());
-            createStudent.setString(3, student.getLastName());
+            PreparedStatement createStudent = conn.prepareStatement("INSERT INTO students(firstName, lastName, cpr )" + "VALUES(?,?,?)");
+            //createStudent.setInt(1, student.getId());
+            createStudent.setString(1, student.getFirstName());
+            createStudent.setString(2, student.getLastName());
             //createStudent.setDate(4, (Date) student.getEnrollmentDate());
-            createStudent.setString(4, student.getCpr());
+            createStudent.setString(3, student.getCpr());
             createStudent.executeUpdate();
-            {
-
-
+           /* {
                 return false;
-            }
+            } */
         } catch (Exception e) {
             e.printStackTrace();
         }
